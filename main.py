@@ -26,12 +26,12 @@ class Product:
 
 
 class GenerateBill:
-    def __init__(self, name, price):
-        self.name = name
+    def __init__(self, Article, price):
+        self.name = Article
         self.price = price
 
     def to_pdf(self):
-        pdf = FPDF(orientation="P", unit="mm", format="A4")
+        pdf = FPDF(orientation="P", unit="mm", format="A5")
         pdf.add_page()
 
         pdf.set_font(family="Times", size=16, style="B")
